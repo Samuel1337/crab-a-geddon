@@ -1500,7 +1500,7 @@
                 
                 // Add title image
                 const titleImg = document.createElement('img');
-                titleImg.src = 'title.png';
+                titleImg.src = 'assets/images/title.png';
                 titleImg.style.cssText = `
                     max-width: 400px;
                     height: auto;
@@ -2626,7 +2626,6 @@
                     // Third Krill dialogue ended, mark as complete and schedule scientist
                     this.dialogueSequence = 0;
                     this.krillDialoguesComplete = true;
-                    console.log('Setting gameRunning = true due to Krill dialogues completion');
                     this.gameRunning = true;
                     console.log('Krill dialogues complete, scheduling scientist dialogue in 10 seconds...');
                     
@@ -2671,7 +2670,6 @@
                     this.dialogueSequence = 0;
                     this.scientistDialoguesComplete = true;
                     this.blueSquaresEnabled = true;
-                    console.log('Setting gameRunning = true due to Scientist dialogues completion');
                     this.gameRunning = true;
                     console.log('Scientist dialogues complete, enabling blue squares and resuming game...');
                     
@@ -2685,7 +2683,6 @@
                 } else if (this.dialogueSequence === 12) {
                     // Second celebration dialogue ended, resume game
                     this.dialogueSequence = 0;
-                    console.log('Setting gameRunning = true due to Celebration dialogues completion');
                     this.gameRunning = true;
                     console.log('Celebration dialogues complete, resuming game...');
                     
@@ -2712,7 +2709,6 @@
                     this.blueSquaresEnabled = false; // Disable cleanup items
                     this.cleanupSpawnRate = 0; // Set cleanup spawn rate to 0
                     this.spawnRate = 0.04; // Double the trash spawn rate (from 0.02 to 0.04)
-                    console.log('Setting gameRunning = true due to Commander dialogues completion');
                     this.gameRunning = true;
                     console.log('Commander dialogues complete, disabling cleanup items and increasing trash spawn rate...');
                     
@@ -2749,7 +2745,6 @@
                     this.blueSquaresEnabled = true; // Re-enable cleanup items
                     this.cleanupSpawnRate = 0.006; // Restore cleanup spawn rate
                     this.spawnRate = 0.04; // Keep trash spawn rate at current level (stabilize)
-                    console.log('Setting gameRunning = true due to UN dialogues completion');
                     this.gameRunning = true;
                     console.log('UN dialogues complete, restoring cleanup items and stabilizing trash spawn rate...');
                     
